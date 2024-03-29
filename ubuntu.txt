@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# List of values
+fruits="apple banana orange mango"
+
+# Iterate through the list of fruits
+for fruit in $fruits
+do
+    echo "I like $fruit"
+done
+
+
+
+
+2)=============================
+
+#!/bin/bash
+
+# Check if the file exists
+if [ -e "$1" ]; then
+    echo "File $1 exists in the current directory."
+else
+    echo "File $1 does not exist in the current directory."
+fi
+
+3)====================================
+
+#!/bin/bash
+
+friendlist="mahesh shivam nikhil rohit anup"
+
+for friend in $friendlist
+do
+    echo "Hello my dear friend $friend. How are you?"
+    if [ "$friend" == "nikhil" ]; then
+        echo "It's me!"
+    fi
+done
+
+4)===========================================================
+
+
+#!/bin/bash
+
+echo "Current Date and Time: $(date)"
+echo "Username: $(whoami)"
+echo "Current Working Directory: $(pwd)"
+
+
+5)============================================
+
+#!/bin/bash
+
+# Save the original file
+cp "$1" "$1.bak"
+
+# Delete lines containing <dd> between the 5th and 7th position
+awk 'NR<5 || NR>7 || !/\<dd\>/' "$1" > temp && mv temp "$1"
+
+# Remove temporary file
+rm temp
+
+
+Save this script as delete_lines.sh, then you can run it from the terminal by providing the filename as an argument, like this:
+
+bash delete_lines.sh your_file.txt
+
+Replace your_file.txt with the name of the file you want to modify. This script will delete lines containing the word <dd> if it appears between the 5th and 7th position and save the modified file.
+
+
+
