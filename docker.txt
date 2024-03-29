@@ -1,0 +1,24 @@
+1) docker run hello-world
+2) docker images
+3) docker pull ubuntu   // pull nantr jaychi img create kayachi aahe tyacha nav
+4) docker run -it -d ubuntu
+5) docker ps -a
+6) docker exec -it 73c79ae2fe20 bash  // ha jo number aahe to step5 madheli container id aahe
+7)echo hello
+8)exit
+/// check docker  other wise follow 
+
+9)docker stop 73c79ae2fe20
+10) docker commit 73c79ae2fe20 zulaikha/ubuntu
+11)  docker images
+12)docker login
+13) docker push zulaikha/ubuntu
+14) docker rm  73c79ae2fe20
+15)docker ps -a
+16) docker images
+
+
+
+
+
+
